@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thiếu Niên - Báo đọc mỗi ngày</title>
+<meta name="description" content="Báo Thiếu Niên: tin tức, thời tiết 34 tỉnh thành, đánh dấu bài và nhớ vị trí đọc.">
+<link rel="icon" href="favicon.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress" aria-hidden="true"><i></i></div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="today"><span id="today">…</span> <span class="dot">•</span> <span id="clock"></span></div>
+    <div class="top-r">
+      <a class="mini-weather" href="#/thoi-tiet" id="miniWeather" title="Xem thời tiết các tỉnh thành">🌤️ <span>Đang tải thời tiết…</span></a>
+      <div class="user-menu" id="userMenu"></div>
+    </div>
+  </div>
+</div>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#/" aria-label="Thiếu Niên - trang chủ"><img src="logo.png" alt="Thiếu Niên"></a>
+    <form class="search" id="searchForm" role="search" autocomplete="off">
+      <input id="q" type="search" placeholder="Tìm bài báo: tiêu đề, nội dung, nhân vật…" aria-label="Tìm kiếm bài báo">
+      <button type="submit" aria-label="Tìm">Tìm</button>
+    </form>
+  </div>
+  <nav class="nav" aria-label="Chuyên mục">
+    <div class="wrap nav-in" id="nav"></div>
+  </nav>
+</header>
+
+<main class="wrap layout">
+  <section id="view" aria-live="polite"></section>
+  <aside id="aside" class="aside"></aside>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="logo.png" alt="Thiếu Niên" class="foot-logo">
+    <p>Thiếu Niên · Trang đọc báo. Vị trí đọc và bài đã lưu được ghi nhớ ngay trên trình duyệt của bạn.</p>
+    <p class="small">Dữ liệu thời tiết: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Hình minh họa là ảnh đồ họa; thả ảnh thật vào thư mục <code>images/</code> (tên 1.jpg, 2.jpg…) để thay thế.</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+<button id="toTop" class="to-top" title="Lên đầu trang" aria-label="Lên đầu trang">↑</button>
+
+<script src="articles.js"></script>
+<script src="app.js"></script>
+<script src="firebase-config.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
